@@ -2,56 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Philanthropist Website Design System - Warm, trustworthy, accessible */
+/* Nigerian-Inspired Website Design System - Warm, earthy, hopeful */
 
 @layer base {
   :root {
-    --background: 0 0% 98%;
-    --foreground: 215 25% 27%;
+    --background: 45 30% 98%;
+    --foreground: 25 25% 25%;
 
     --card: 0 0% 100%;
-    --card-foreground: 215 25% 27%;
+    --card-foreground: 25 25% 25%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 27%;
+    --popover-foreground: 25 25% 25%;
 
-    /* Trust Blue - Primary brand color */
-    --primary: 213 94% 68%;
+    /* Nigerian Green - Primary brand color representing growth, nature, and hope */
+    --primary: 120 40% 45%;
     --primary-foreground: 0 0% 100%;
-    --primary-hover: 213 94% 58%;
+    --primary-hover: 120 40% 35%;
 
-    /* Hope Amber - Secondary warm color */
-    --secondary: 43 96% 56%;
-    --secondary-foreground: 215 25% 27%;
-    --secondary-hover: 43 96% 46%;
+    /* Nigerian Gold - Secondary warm color representing prosperity and warmth */
+    --secondary: 45 80% 55%;
+    --secondary-foreground: 25 25% 25%;
+    --secondary-hover: 45 80% 45%;
 
-    /* Warm neutrals */
-    --muted: 220 14% 96%;
-    --muted-foreground: 215 16% 47%;
+    /* Nigerian Indigo - Traditional color representing wisdom and spirituality */
+    --tertiary: 240 60% 45%;
+    --tertiary-foreground: 0 0% 100%;
 
-    --accent: 213 94% 95%;
-    --accent-foreground: 213 94% 68%;
+    /* Warm earth tones */
+    --muted: 35 20% 94%;
+    --muted-foreground: 25 20% 45%;
+
+    --accent: 120 40% 92%;
+    --accent-foreground: 120 40% 45%;
+
+    /* Nigerian Brown - Earthy tone representing stability and tradition */
+    --earth: 30 40% 35%;
+    --earth-foreground: 0 0% 100%;
 
     /* Accessible error state */
-    --destructive: 0 84% 60%;
+    --destructive: 0 70% 55%;
     --destructive-foreground: 0 0% 100%;
 
     /* Subtle borders and inputs */
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 213 94% 68%;
+    --border: 35 20% 88%;
+    --input: 35 20% 88%;
+    --ring: 120 40% 45%;
 
     --radius: 0.75rem;
 
     /* Custom design tokens */
-    --hero-gradient: linear-gradient(135deg, hsl(213, 94%, 68%), hsl(43, 96%, 56%));
-    --warm-gradient: linear-gradient(180deg, hsl(43, 96%, 98%), hsl(43, 96%, 94%));
-    --trust-gradient: linear-gradient(180deg, hsl(213, 94%, 98%), hsl(213, 94%, 95%));
+    --hero-gradient: linear-gradient(135deg, hsl(120, 40%, 45%), hsl(45, 80%, 55%));
+    --warm-gradient: linear-gradient(180deg, hsl(45, 80%, 98%), hsl(45, 80%, 94%));
+    --trust-gradient: linear-gradient(180deg, hsl(120, 40%, 98%), hsl(120, 40%, 95%));
     
     /* Shadows for depth */
-    --shadow-soft: 0 2px 10px hsl(215, 25%, 27%, 0.08);
-    --shadow-medium: 0 4px 20px hsl(215, 25%, 27%, 0.12);
-    --shadow-strong: 0 8px 30px hsl(215, 25%, 27%, 0.16);
+    --shadow-soft: 0 2px 10px hsl(25, 25%, 25%, 0.08);
+    --shadow-medium: 0 4px 20px hsl(25, 25%, 25%, 0.12);
+    --shadow-strong: 0 8px 30px hsl(25, 25%, 25%, 0.16);
 
     /* Typography scale */
     --font-display: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
@@ -67,57 +75,65 @@
     --text-3xl: 1.875rem;
     --text-4xl: 2.25rem;
 
-    --sidebar-background: 0 0% 98%;
+    --sidebar-background: 45 30% 98%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-foreground: 25 25% 25%;
 
-    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary: 25 25% 25%;
 
-    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-primary-foreground: 45 30% 98%;
 
-    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent: 35 20% 94%;
 
-    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-accent-foreground: 25 25% 25%;
 
-    --sidebar-border: 220 13% 91%;
+    --sidebar-border: 35 20% 88%;
 
   }
 
   .dark {
-    --background: 215 25% 12%;
-    --foreground: 213 31% 91%;
+    --background: 25 25% 12%;
+    --foreground: 45 30% 90%;
 
-    --card: 215 25% 16%;
-    --card-foreground: 213 31% 91%;
+    --card: 25 25% 16%;
+    --card-foreground: 45 30% 90%;
 
-    --popover: 215 25% 16%;
-    --popover-foreground: 213 31% 91%;
+    --popover: 25 25% 16%;
+    --popover-foreground: 45 30% 90%;
 
-    --primary: 213 94% 68%;
-    --primary-foreground: 215 25% 12%;
-    --primary-hover: 213 94% 58%;
+    --primary: 120 40% 45%;
+    --primary-foreground: 25 25% 12%;
+    --primary-hover: 120 40% 35%;
 
-    --secondary: 43 96% 56%;
-    --secondary-foreground: 215 25% 12%;
-    --secondary-hover: 43 96% 46%;
+    --secondary: 45 80% 55%;
+    --secondary-foreground: 25 25% 12%;
+    --secondary-hover: 45 80% 45%;
 
-    --muted: 215 25% 20%;
-    --muted-foreground: 215 16% 65%;
+    /* Nigerian Indigo - Traditional color representing wisdom and spirituality */
+    --tertiary: 240 60% 45%;
+    --tertiary-foreground: 25 25% 12%;
 
-    --accent: 215 25% 18%;
-    --accent-foreground: 213 31% 91%;
+    --muted: 25 25% 20%;
+    --muted-foreground: 25 20% 65%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 213 31% 91%;
+    --accent: 25 25% 18%;
+    --accent-foreground: 45 30% 90%;
 
-    --border: 215 25% 20%;
-    --input: 215 25% 20%;
-    --ring: 213 94% 68%;
+    /* Nigerian Brown - Earthy tone representing stability and tradition */
+    --earth: 30 40% 35%;
+    --earth-foreground: 45 30% 90%;
+
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 45 30% 90%;
+
+    --border: 25 25% 20%;
+    --input: 25 25% 20%;
+    --ring: 120 40% 45%;
 
     /* Custom design tokens for dark mode */
-    --hero-gradient: linear-gradient(135deg, hsl(213, 94%, 68%), hsl(43, 96%, 56%));
-    --warm-gradient: linear-gradient(180deg, hsl(43, 96%, 8%), hsl(43, 96%, 12%));
-    --trust-gradient: linear-gradient(180deg, hsl(213, 94%, 8%), hsl(213, 94%, 12%));
+    --hero-gradient: linear-gradient(135deg, hsl(120, 40%, 45%), hsl(45, 80%, 55%));
+    --warm-gradient: linear-gradient(180deg, hsl(45, 80%, 8%), hsl(45, 80%, 12%));
+    --trust-gradient: linear-gradient(180deg, hsl(120, 40%, 8%), hsl(120, 40%, 12%));
     
     --shadow-soft: 0 2px 10px hsl(0, 0%, 0%, 0.3);
     --shadow-medium: 0 4px 20px hsl(0, 0%, 0%, 0.4);

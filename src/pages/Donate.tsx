@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useMutation } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-import { Heart, DollarSign, Users, CheckCircle } from "lucide-react";
+import { Heart, CreditCard, Users, CheckCircle, Images } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -21,7 +21,7 @@ const Donate = () => {
     message: ""
   });
 
-  const presetAmounts = [20, 50, 100, 250, 500, 1000];
+  const presetAmounts = [5000, 10000, 25000, 50000, 100000, 250000];
 
   const submitDonation = useMutation({
     mutationFn: async (data: { amount: number; donorInfo: typeof donorInfo }) => {
@@ -93,7 +93,7 @@ const Donate = () => {
             <Heart className="mx-auto h-16 w-16 text-primary mb-6" />
             <h1 className="text-4xl font-bold text-foreground mb-4">Make a Difference Today</h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Your generous contribution directly helps individuals and families in need receive the medical care and support they deserve.
+              Your generous contribution directly helps Nigerians receive the medical care and support they deserve. Together, we can build a healthier, stronger Nigeria.
             </p>
           </div>
 
@@ -101,8 +101,8 @@ const Donate = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             <Card className="text-center card-trust">
               <CardContent className="pt-6">
-                <DollarSign className="mx-auto h-10 w-10 text-primary mb-4" />
-                <h3 className="text-2xl font-bold text-foreground mb-2">$250,000+</h3>
+                <CreditCard className="mx-auto h-10 w-10 text-primary mb-4" />
+                <h3 className="text-2xl font-bold text-foreground mb-2">₦100,000,000+</h3>
                 <p className="text-muted-foreground">Total funds distributed</p>
               </CardContent>
             </Card>
@@ -110,7 +110,7 @@ const Donate = () => {
               <CardContent className="pt-6">
                 <Users className="mx-auto h-10 w-10 text-secondary mb-4" />
                 <h3 className="text-2xl font-bold text-foreground mb-2">500+</h3>
-                <p className="text-muted-foreground">Families helped</p>
+                <p className="text-muted-foreground">Nigerian families helped</p>
               </CardContent>
             </Card>
             <Card className="text-center card-trust">
@@ -141,7 +141,7 @@ const Donate = () => {
                         onClick={() => handleAmountSelect(amount)}
                         className="touch-target text-lg font-semibold"
                       >
-                        ${amount}
+                        ₦{amount.toLocaleString()}
                       </Button>
                     ))}
                   </div>
@@ -151,13 +151,13 @@ const Donate = () => {
                 <div>
                   <Label htmlFor="customAmount" className="form-label">Or enter a custom amount</Label>
                   <div className="relative">
-                    <DollarSign className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+                    <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground font-medium">₦</span>
                     <Input
                       id="customAmount"
                       type="number"
                       value={customAmount}
                       onChange={(e) => handleCustomAmountChange(e.target.value)}
-                      className="form-input pl-10"
+                      className="form-input pl-8"
                       placeholder="Enter amount"
                       min="1"
                     />
@@ -206,7 +206,7 @@ const Donate = () => {
                 >
                   {submitDonation.isPending 
                     ? "Processing..." 
-                    : `Donate ${selectedAmount ? `$${selectedAmount}` : ''}`
+                    : `Donate ${selectedAmount ? `₦${selectedAmount.toLocaleString()}` : ''}`
                   }
                 </Button>
               </CardContent>
@@ -221,10 +221,10 @@ const Donate = () => {
                 <CardContent className="space-y-4">
                   <div className="flex items-start gap-4">
                     <div className="bg-secondary text-secondary-foreground rounded-full p-2 flex-shrink-0">
-                      <DollarSign className="h-5 w-5" />
+                      <CreditCard className="h-5 w-5" />
                     </div>
                     <div>
-                      <h4 className="font-semibold mb-1">$20</h4>
+                      <h4 className="font-semibold mb-1">₦5,000</h4>
                       <p className="text-muted-foreground">Provides basic medical supplies for one family</p>
                     </div>
                   </div>
@@ -233,7 +233,7 @@ const Donate = () => {
                       <Heart className="h-5 w-5" />
                     </div>
                     <div>
-                      <h4 className="font-semibold mb-1">$50</h4>
+                      <h4 className="font-semibold mb-1">₦10,000</h4>
                       <p className="text-muted-foreground">Covers emergency medication for a chronic condition</p>
                     </div>
                   </div>
@@ -242,7 +242,7 @@ const Donate = () => {
                       <Users className="h-5 w-5" />
                     </div>
                     <div>
-                      <h4 className="font-semibold mb-1">$100</h4>
+                      <h4 className="font-semibold mb-1">₦25,000</h4>
                       <p className="text-muted-foreground">Funds a critical medical consultation</p>
                     </div>
                   </div>
@@ -251,7 +251,7 @@ const Donate = () => {
                       <CheckCircle className="h-5 w-5" />
                     </div>
                     <div>
-                      <h4 className="font-semibold mb-1">$250+</h4>
+                      <h4 className="font-semibold mb-1">₦50,000+</h4>
                       <p className="text-muted-foreground">Supports a family through a medical emergency</p>
                     </div>
                   </div>
@@ -280,6 +280,15 @@ const Donate = () => {
                       <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
                       <span>Tax-deductible receipts issued</span>
                     </div>
+                  </div>
+                  
+                  <div className="mt-6 pt-4 border-t border-border">
+                    <Button asChild variant="outline" className="w-full">
+                      <Link to="/gallery">
+                        <Images className="h-4 w-4 mr-2" />
+                        See the Impact of Your Donations
+                      </Link>
+                    </Button>
                   </div>
                 </CardContent>
               </Card>

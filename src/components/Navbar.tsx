@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, X, Heart, HandHeart, Home, Info, Phone } from "lucide-react";
+import { Menu, X, Heart, HandHeart, Home, Info, Phone, Images } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,6 +10,7 @@ const Navbar = () => {
 
   const navigation = [
     { name: "Home", href: "/", icon: Home },
+    { name: "Gallery", href: "/gallery", icon: Images },
     { name: "Request Help", href: "/request-help", icon: HandHeart },
     { name: "Donate", href: "/donate", icon: Heart },
     { name: "About", href: "/#about", icon: Info },
@@ -39,7 +40,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 font-bold text-xl text-primary">
             <Heart className="h-8 w-8" />
-            <span>Hope Foundation</span>
+            <span>Okwulora Helps</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -85,7 +86,7 @@ const Navbar = () => {
               <div className="flex items-center justify-between mb-8">
                 <Link to="/" className="flex items-center gap-2 font-bold text-xl text-primary">
                   <Heart className="h-8 w-8" />
-                  <span>Hope Foundation</span>
+                  <span>Okwulora Helps</span>
                 </Link>
                 <Button
                   variant="ghost"

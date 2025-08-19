@@ -248,7 +248,7 @@ const RequestHelp = () => {
                 <Upload className="mx-auto h-12 w-12 text-muted-foreground mb-4" />
                 <p className="text-lg font-medium mb-2">Upload your documents</p>
                 <p className="text-muted-foreground mb-4">
-                  Doctor's reports, medical records, prescriptions, or any relevant files
+                  Doctor's reports, Medical Records, Prescriptions, and NIN Slip.
                 </p>
                 <input
                   type="file"

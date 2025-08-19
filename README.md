@@ -1,73 +1,119 @@
-# Welcome to your Lovable project
+# Okwulora Helps
 
-## Project info
+A Nigerian-focused medical assistance platform that provides hope, support, and resources to Nigerians facing medical challenges.
 
-**URL**: https://lovable.dev/projects/e6bf2682-4f60-422c-aa65-0a64beffa632
+## Features
 
-## How can I edit this code?
+- **Nigerian-Inspired Design**: Uses soothing colors that Nigerians can relate to, including:
+  - Nigerian Green (primary): Represents growth, nature, and hope
+  - Nigerian Gold (secondary): Represents prosperity and warmth
+  - Nigerian Indigo (tertiary): Traditional color representing wisdom and spirituality
+  - Earth tones: Warm, grounding colors representing stability and tradition
 
-There are several ways of editing your application.
+- **Naira Currency**: All monetary values are displayed in Nigerian Naira (₦)
+- **Localized Content**: Nigerian names, locations, and cultural context throughout
+- **Medical Assistance Requests**: Multi-step form for requesting medical help
+- **Donation Platform**: Secure donation system with preset and custom amounts
+- **Gallery of Hope**: Before and after transformation stories with lightbox viewing
+- **Responsive Design**: Mobile-first approach with accessibility features
 
-**Use Lovable**
+## Admin System
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/e6bf2682-4f60-422c-aa65-0a64beffa632) and start prompting.
+### **Authentication**
+- Secure admin login with username/password
+- Session management using localStorage
+- Protected admin routes
 
-Changes made via Lovable will be committed automatically to this repo.
+### **Dashboard Overview**
+- Real-time statistics and metrics
+- Recent activity feed
+- Quick action buttons for common tasks
+- Monthly impact tracking
 
-**Use your preferred IDE**
+### **Stories Management**
+- Create, edit, and delete transformation stories
+- Upload before and after images
+- Categorize stories by medical type
+- Set publication status (draft/published)
+- Search and filter functionality
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### **Donations Management**
+- View all donation records
+- Track payment status and methods
+- Export donation data to CSV
+- Filter by date, status, and payment method
+- Transaction ID tracking
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### **Requests Management**
+- Review help requests from users
+- Update request status (pending → reviewing → approved → completed)
+- Assign requests to staff members
+- Priority-based sorting (urgent, high, medium, low)
+- Detailed request information and notes
 
-Follow these steps:
+### **Admin Access**
+- **URL**: `/admin/login`
+- **Demo Credentials**:
+  - Username: `admin`
+  - Password: `okwulora2024`
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## Color Scheme
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+The site uses a carefully selected color palette inspired by Nigerian culture:
 
-# Step 3: Install the necessary dependencies.
-npm i
+- **Primary**: Green (hsl(120, 40%, 45%)) - Growth and hope
+- **Secondary**: Gold (hsl(45, 80%, 55%)) - Prosperity and warmth  
+- **Tertiary**: Indigo (hsl(240, 60%, 45%)) - Wisdom and spirituality
+- **Earth**: Brown (hsl(30, 40%, 35%)) - Stability and tradition
+- **Background**: Warm cream (hsl(45, 30%, 98%)) - Welcoming and comfortable
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+## Technology Stack
 
-**Edit a file directly in GitHub**
+- React 18 with TypeScript
+- Tailwind CSS for styling
+- React Router for navigation
+- React Query for data management
+- Lucide React for icons
+- Vite for build tooling
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Getting Started
 
-**Use GitHub Codespaces**
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+2. Start development server:
+   ```bash
+   npm run dev
+   ```
 
-## What technologies are used for this project?
+3. Build for production:
+   ```bash
+   npm run build
+   ```
 
-This project is built with:
+4. Access admin panel:
+   - Navigate to `/admin/login`
+   - Use demo credentials: `admin` / `okwulora2024`
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Cultural Sensitivity
 
-## How can I deploy this project?
+This platform is designed with Nigerian cultural values in mind:
+- Community-focused approach
+- Emphasis on unity and compassion
+- Respect for traditional values
+- Localized language and context
+- Nigerian phone numbers and addresses
 
-Simply open [Lovable](https://lovable.dev/projects/e6bf2682-4f60-422c-aa65-0a64beffa632) and click on Share -> Publish.
+## Contributing
 
-## Can I connect a custom domain to my Lovable project?
+We welcome contributions that help make this platform more accessible and culturally appropriate for Nigerians in need of medical assistance.
 
-Yes, you can!
+## Security Notes
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+- The current admin authentication is for demonstration purposes
+- In production, implement proper JWT tokens and secure authentication
+- Add rate limiting and input validation
+- Use environment variables for sensitive configuration
+- Implement proper session management

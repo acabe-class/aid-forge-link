@@ -102,9 +102,9 @@ const ThankYou = () => {
               <strong>Need immediate assistance?</strong>
             </p>
             <p className="text-sm">
-              Call us at <a href="tel:+1-555-HELP-NOW" className="text-primary hover:underline font-semibold">+1 (555) HELP-NOW</a>
+              Call us at <a href="tel:+234-555-HELP-NOW" className="text-primary hover:underline font-semibold">+234 (555) HELP-NOW</a>
               <br />
-              or email <a href="mailto:support@helpfoundation.org" className="text-primary hover:underline font-semibold">support@helpfoundation.org</a>
+              or email <a href="mailto:support@okwulorahelps.org" className="text-primary hover:underline font-semibold">support@okwulorahelps.org</a>
             </p>
           </div>
         </div>

@@ -6,6 +6,7 @@ const Footer = () => {
 
   const quickLinks = [
     { name: "Home", href: "/" },
+    { name: "Gallery", href: "/gallery" },
     { name: "Request Help", href: "/request-help" },
     { name: "Donate", href: "/donate" },
     { name: "About Us", href: "/#about" },
@@ -33,10 +34,10 @@ const Footer = () => {
           <div className="space-y-4">
             <Link to="/" className="flex items-center gap-2 font-bold text-xl text-primary">
               <Heart className="h-8 w-8" />
-              <span>Hope Foundation</span>
+              <span>Okwulora Helps</span>
             </Link>
             <p className="text-muted-foreground leading-relaxed">
-              Dedicated to providing hope, support, and resources to individuals and families facing medical challenges.
+              Dedicated to providing hope, support, and resources to Nigerians facing medical challenges.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
@@ -75,22 +76,22 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center gap-3 text-muted-foreground">
                 <Phone className="h-4 w-4 flex-shrink-0" />
-                <a href="tel:+1-555-HELP-NOW" className="hover:text-primary transition-colors">
-                  +1 (555) HELP-NOW
+                <a href="tel:+234-555-HELP-NOW" className="hover:text-primary transition-colors">
+                  +234 (555) HELP-NOW
                 </a>
               </div>
               <div className="flex items-center gap-3 text-muted-foreground">
                 <Mail className="h-4 w-4 flex-shrink-0" />
-                <a href="mailto:info@hopefoundation.org" className="hover:text-primary transition-colors">
-                  info@hopefoundation.org
+                <a href="mailto:info@okwulorahelps.org" className="hover:text-primary transition-colors">
+                  info@okwulorahelps.org
                 </a>
               </div>
               <div className="flex items-start gap-3 text-muted-foreground">
                 <MapPin className="h-4 w-4 flex-shrink-0 mt-0.5" />
                 <address className="not-italic">
                   123 Hope Street<br />
-                  Charity City, CC 12345<br />
-                  United States
+                  Lagos, Nigeria<br />
+                  West Africa
                 </address>
               </div>
             </div>
@@ -113,9 +114,17 @@ const Footer = () => {
             </ul>
             <div className="mt-6 p-4 bg-accent rounded-lg">
               <p className="text-sm text-muted-foreground">
-                <strong>Tax ID:</strong> 12-3456789<br />
-                Registered 501(c)(3) nonprofit organization
+                <strong>Registration:</strong> CAC/IT/123456<br />
+                Registered nonprofit organization in Nigeria
               </p>
+            </div>
+            <div className="mt-4">
+              <Link
+                to="/admin/login"
+                className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200"
+              >
+                Admin Access
+              </Link>
             </div>
           </div>
         </div>
@@ -124,7 +133,7 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-muted-foreground text-sm">
-              © {currentYear} Hope Foundation. All rights reserved.
+              © {currentYear} Okwulora Helps. All rights reserved.
             </p>
             <div className="flex items-center gap-4 text-sm text-muted-foreground">
               <span>Made with</span>

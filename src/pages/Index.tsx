@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Heart, HandHeart, Users, Shield, Target, CheckCircle, Star, Quote } from "lucide-react";
+import { Heart, HandHeart, Users, Shield, Target, CheckCircle, Star, Quote, Images } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import heroImage from "@/assets/hero-image.jpg";
@@ -9,28 +9,28 @@ import heroImage from "@/assets/hero-image.jpg";
 const Index = () => {
   const stats = [
     { icon: Users, value: "500+", label: "Families Helped" },
-    { icon: Heart, value: "$250K+", label: "Funds Distributed" },
+    { icon: Heart, value: "₦100M+", label: "Funds Distributed" },
     { icon: Shield, value: "95%", label: "Direct to Aid" },
     { icon: Target, value: "24/7", label: "Support Available" },
   ];
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      location: "Denver, CO",
-      quote: "When my daughter needed emergency surgery, Hope Foundation stepped in immediately. Their support changed our lives forever.",
+      name: "Aisha Bello",
+      location: "Lagos, Nigeria",
+      quote: "When my daughter needed emergency surgery, Okwulora Helps stepped in immediately. Their support changed our lives forever.",
       rating: 5,
     },
     {
-      name: "Michael Rodriguez",
-      location: "Phoenix, AZ", 
+      name: "Emeka Okafor",
+      location: "Enugu, Nigeria", 
       quote: "The compassionate team helped us navigate the complex medical system and provided both financial and emotional support.",
       rating: 5,
     },
     {
-      name: "Emily Chen",
-      location: "Seattle, WA",
-      quote: "Thanks to Hope Foundation, my father received the treatment he needed. Their dedication to helping families is remarkable.",
+      name: "Fatima Hassan",
+      location: "Kano, Nigeria",
+      quote: "Thanks to Okwulora Helps, my father received the treatment he needed. Their dedication to helping families is remarkable.",
       rating: 5,
     },
   ];
@@ -74,7 +74,7 @@ const Index = () => {
               Bringing Hope to Those Who Need It Most
             </h1>
             <p className="text-xl md:text-2xl mb-8 opacity-90 animate-slide-up">
-              We provide compassionate support and resources to individuals and families facing medical challenges, ensuring no one faces their journey alone.
+              We provide compassionate support and resources to Nigerians facing medical challenges, ensuring no one faces their journey alone. Together, we build a stronger, healthier Nigeria.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up">
               <Button asChild size="lg" className="btn-hero touch-target">
@@ -120,7 +120,7 @@ const Index = () => {
                 Our Mission
               </h2>
               <p className="text-xl text-muted-foreground">
-                Hope Foundation was created with a simple yet powerful belief: healthcare should be accessible to everyone, regardless of their financial situation.
+                Okwulora Helps was created with a simple yet powerful belief: healthcare should be accessible to every Nigerian, regardless of their financial situation. Rooted in our Nigerian values of community, compassion, and unity.
               </p>
             </div>
 
@@ -140,11 +140,19 @@ const Index = () => {
 
             <div className="text-center">
               <p className="text-lg text-muted-foreground mb-8">
-                Since our founding, we've been privileged to support hundreds of families through their most challenging times. Every request we receive is treated with dignity, respect, and the urgency it deserves.
+                Since our founding, we've been privileged to support hundreds of Nigerian families through their most challenging times. Every request we receive is treated with dignity, respect, and the urgency it deserves.
               </p>
-              <Button asChild size="lg" className="btn-cta-primary touch-target">
-                <Link to="/request-help">Start Your Request</Link>
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button asChild size="lg" className="btn-cta-primary touch-target">
+                  <Link to="/request-help">Start Your Request</Link>
+                </Button>
+                <Button asChild size="lg" variant="outline" className="btn-cta-secondary touch-target">
+                  <Link to="/gallery">
+                    <Images className="h-4 w-4 mr-2" />
+                    View Stories
+                  </Link>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
@@ -183,6 +191,110 @@ const Index = () => {
                   </CardContent>
                 </Card>
               ))}
+            </div>
+
+            <div className="text-center mt-12">
+              <Button asChild size="lg" variant="outline" className="btn-cta-secondary touch-target">
+                <Link to="/gallery">
+                  <Images className="h-4 w-4 mr-2" />
+                  View All Stories
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Transformations Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+                Transformations That Inspire
+              </h2>
+              <p className="text-xl text-muted-foreground">
+                See the incredible before and after stories of hope and healing.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+              <Card className="overflow-hidden shadow-medium hover:shadow-strong transition-all duration-300">
+                <div className="grid grid-cols-2 gap-0">
+                  <div className="relative">
+                    <img
+                      src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=300&fit=crop&crop=face"
+                      alt="Before treatment"
+                      className="w-full h-48 object-cover"
+                    />
+                    <div className="absolute top-2 left-2 bg-primary text-white text-xs px-2 py-1 rounded">
+                      Before
+                    </div>
+                  </div>
+                  <div className="relative">
+                    <img
+                      src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=300&fit=crop&crop=face"
+                      alt="After treatment"
+                      className="w-full h-48 object-cover"
+                    />
+                    <div className="absolute top-2 left-2 bg-secondary text-white text-xs px-2 py-1 rounded">
+                      After
+                    </div>
+                  </div>
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold mb-3">Aisha's Heart Surgery</h3>
+                  <p className="text-muted-foreground mb-4">
+                    Aisha received life-saving heart surgery through our medical assistance program. Her recovery has been remarkable and she's now back to her studies.
+                  </p>
+                  <Button asChild variant="outline" className="w-full">
+                    <Link to="/gallery">View Full Story</Link>
+                  </Button>
+                </CardContent>
+              </Card>
+
+              <Card className="overflow-hidden shadow-medium hover:shadow-strong transition-all duration-300">
+                <div className="grid grid-cols-2 gap-0">
+                  <div className="relative">
+                    <img
+                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop&crop=face"
+                      alt="Before treatment"
+                      className="w-full h-48 object-cover"
+                    />
+                    <div className="absolute top-2 left-2 bg-primary text-white text-xs px-2 py-1 rounded">
+                      Before
+                    </div>
+                  </div>
+                  <div className="relative">
+                    <img
+                      src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=300&fit=crop&crop=face"
+                      alt="After treatment"
+                      className="w-full h-48 object-cover"
+                    />
+                    <div className="absolute top-2 left-2 bg-secondary text-white text-xs px-2 py-1 rounded">
+                      After
+                    </div>
+                  </div>
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold mb-3">Emeka's Diabetes Care</h3>
+                  <p className="text-muted-foreground mb-4">
+                    Emeka's diabetes treatment was fully funded, allowing him to manage his condition and return to work, supporting his family once again.
+                  </p>
+                  <Button asChild variant="outline" className="w-full">
+                    <Link to="/gallery">View Full Story</Link>
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="text-center">
+              <Button asChild size="lg" className="btn-hero touch-target">
+                <Link to="/gallery">
+                  <Images className="h-5 w-5 mr-2" />
+                  Explore All Transformations
+                </Link>
+              </Button>
             </div>
           </div>
         </div>
@@ -237,21 +349,21 @@ const Index = () => {
                     For urgent medical assistance requests, call our 24/7 helpline:
                   </p>
                   <a 
-                    href="tel:+1-555-HELP-NOW" 
+                    href="tel:+234-555-HELP-NOW" 
                     className="text-2xl font-bold text-primary hover:text-primary/80 transition-colors"
                   >
-                    +1 (555) HELP-NOW
+                    +234 (555) HELP-NOW
                   </a>
                 </div>
 
                 <div>
                   <h3 className="text-xl font-semibold text-foreground mb-4">General Inquiries</h3>
                   <div className="space-y-2 text-muted-foreground">
-                    <p>Email: <a href="mailto:info@hopefoundation.org" className="text-primary hover:underline">info@hopefoundation.org</a></p>
-                    <p>Phone: <a href="tel:+1-555-123-4567" className="text-primary hover:underline">+1 (555) 123-4567</a></p>
+                    <p>Email: <a href="mailto:info@okwulorahelps.org" className="text-primary hover:underline">info@okwulorahelps.org</a></p>
+                    <p>Phone: <a href="tel:+234-555-123-4567" className="text-primary hover:underline">+234 (555) 123-4567</a></p>
                     <address className="not-italic">
                       123 Hope Street<br />
-                      Charity City, CC 12345
+                      Lagos, Nigeria
                     </address>
                   </div>
                 </div>
